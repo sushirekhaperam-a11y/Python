@@ -1,50 +1,18 @@
-def printdata():
-    print("hi")
-printdata()
-
-
-def printdata(name):
-    print("hello",name)
-printdata("sunil")
-printdata("varsha")
-
-def squ(num):
-    result=num*num
-    return result
-print(squ(6))
-
-def fun_pass():
-    pass
-fun_pass()
-
-#multiple values return
-def cal(a,b):
-    return a+b,a-b,a*b
-add,sub,mul = cal(15,10)
-print(add)
-print(sub)
-print(mul)
-
-#function calling another function
-def areaofrect(len,width):
-    return len * width
-def areaofsqu(side):
-    return side * side
-value = areaofrect(4,5)
-squ = areaofsqu(value)
-print(squ)
-
-#using the for loop
-def even(limit):
-    for i in range(2, limit+1,2):
-        print(i)
-even(10)
-
-#using the if else condition
-def even(num):
-    if num%2==0:
-        return "even"
+#Write a Python function to sum all the numbers in a list
+def sum(list):
+    sum=0
+    for i in list:
+        sum+=i
+    return sum
+values = sum([10,20,30,40])
+print(values)
+#Write a Python function to find the maximum of three numbers.
+def maximum(a,b,c):
+    if a > b:
+        return a
+    elif b > c:
+        return b
     else:
-        return "odd"
-print(even(6))
-print(even(9))
+        return c
+values = maximum(10,20,30)
+print(values)
